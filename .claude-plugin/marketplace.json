@@ -1,0 +1,17 @@
+{
+  "name": "flingit",
+  "owner": {
+    "name": "Glide"
+  },
+  "metadata": {
+    "description": "Fling — personal software platform with React frontend, API backend, and Cloudflare Workers deployment"
+  },
+  "plugins": [
+    {
+      "name": "fling",
+      "source": ".",
+      "description": "Initialize Fling projects — personal software platform with React frontend, API backend, and Cloudflare Workers deployment",
+      "version": "1.0.0"
+    }
+  ]
+}
