@@ -1,0 +1,7 @@
+{
+  "name": "fling",
+  "description": "Initialize Fling projects — personal software platform with React frontend, API backend, and Cloudflare Workers deployment",
+  "version": "1.0.0",
+  "author": { "name": "Glide" },
+  "repository": "https://github.com/typeguard/flingit"
+}

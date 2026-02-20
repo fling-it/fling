@@ -1,0 +1,6 @@
+{
+    "permissions": {
+        "defaultMode": "acceptEdits",
+        "allow": ["Skill(fling)", "Bash(npm start)", "Bash(npm exec fling:*)"]
+    }
+}
