@@ -1,43 +1,26 @@
 ---
 name: setup-fling
-description: >
-  Initialize a new Fling project — a personal software platform with React
-  frontend, Hono API backend, SQLite database, and Cloudflare Workers deployment.
-  Use when the user wants to create a new Fling project or asks about Fling.
-allowed-tools: Bash(python3 *), Bash(npm install*), Read
+description: Set up a new Fling project in the current directory. Use when the user wants to create a new web app, API, or tool using Fling.
+allowed-tools: Bash(npm *), Read
 ---
 
-# Setup Fling Project
+# Setup Fling
 
-Initialize a new Fling project in the current directory.
+If the user wants to build a project with Fling, you'll need an empty directory. Offer to create one, like `~/flings/my-new-fling`, but go with whatever the user wants. Make sure it's empty.
 
-## Steps
+Then, in that directory, initialize the Fling project with:
 
-1. **Verify the current directory is empty.** If it contains files, confirm with the user before proceeding — they should create a new empty directory first.
+```bash
+npm init --yes && npm i flingit && npm exec -- fling init --force && npm i
+```
 
-2. **Run the init script** to scaffold the project:
-   ```bash
-   python3 `echo $CLAUDE_PLUGIN_ROOT`/skills/setup-fling/scripts/init.py
-   ```
+That installs the `flingit` package and scaffolds a Fling project, which supports React frontend, Hono API backend, database, storage, cron jobs, secrets, Slack&Discord bots.
 
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+After init completes, read the `fling` skill (in `.claude/skills/fling/SKILL.md`) for how to build and deploy the app, and build the project for the user. Ask them what they want to build, if they haven't told you already.
 
-4. **Read the project skill** to understand what the user can build:
-   ```
-   Read .claude/skills/fling/SKILL.md
-   ```
+## Troubleshooting
 
-5. **Tell the user what was created:**
-   - React frontend with Tailwind CSS
-   - Hono API backend with typed routes
-   - SQLite database with migrations
-   - Cron job support
-   - Static file storage
-   - Cloudflare Workers deployment via `fling push`
+If the installation fails, diagnose and try to fix it, but consult with the user.  Potential issues:
 
-6. **Ask the user what they want to build.** Suggest ideas based on the project capabilities.
-
-7. **Mention** they can also just open Claude Code in this directory anytime to continue working on their project.
+- `npm` not installed: Install Node.js 22 or later via NVM: https://github.com/nvm-sh/nvm
+- Node.js version too old: Update to Node.js 22 or later via NVM
