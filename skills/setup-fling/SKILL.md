@@ -1,7 +1,7 @@
 ---
 name: setup-fling
 description: Set up a new Fling project in the current directory. Use when the user wants to create a new web app, API, or tool using Fling.
-allowed-tools: Bash(npm *), Read
+allowed-tools: Bash(mkdir *), Bash(npm *), Read
 ---
 
 # Setup Fling
