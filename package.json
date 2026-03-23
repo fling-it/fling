@@ -1,0 +1,11 @@
+{
+  "name": "@fling-it/pi-package",
+  "version": "0.0.1",
+  "description": "Pi package for setting up and building Fling projects",
+  "keywords": ["pi-package"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fling-it/fling.git"
+  },
+  "license": "MIT"
+}
