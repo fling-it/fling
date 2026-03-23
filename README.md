@@ -6,8 +6,9 @@ A plugin for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [
 
 **Claude Code:**
 
-```bash
-claude mcp add-skill https://github.com/fling-it/fling
+```
+/plugin marketplace add fling-it/fling
+/plugin install fling@fling
 ```
 
 **pi:**
